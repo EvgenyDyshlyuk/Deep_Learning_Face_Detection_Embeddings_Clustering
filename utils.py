@@ -318,8 +318,6 @@ def variance_of_laplacian(image):
     Returns:
         assessment of bluriness
     """
-    # compute the Laplacian of the image and then return the focus
-    # measure, which is simply the variance of the Laplacian
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     conv2d = cv2.Laplacian(gray_image, cv2.CV_64F)    
     return int((conv2d.max() - conv2d.min())**2/(2*conv2d.var())) # int((conv2d.max() - conv2d.min())**2/2), int(conv2d.var()), 
@@ -403,7 +401,7 @@ def resize_image(image, new_size):
     image_resized = cv2.resize(image, new_size)
     return image_resized
 
-def image_filter(df, save_image, preview, confidence_filter, face_height_filter, nose_shift_filter, eye_line_angle_filter, sharpness_filter):
+def image_filter(df, save_image_folder, preview, confidence_filter, face_height_filter, nose_shift_filter, eye_line_angle_filter, sharpness_filter):
     """Image filter can work in preview, save, save/preview mode
     uses several parameters to filter the images
     
@@ -414,8 +412,10 @@ def image_filter(df, save_image, preview, confidence_filter, face_height_filter,
     Returns:
         Bool: True if not grayscale
     """
-    if save_image == True: show_landmarks = False
-    else: show_landmarks = True    
+    if save_image_folder == False:
+        show_landmarks = True
+    else:
+        show_landmarks = False    
     
     img_cnt = 0
     good_img_cnt = 0
@@ -460,10 +460,6 @@ def image_filter(df, save_image, preview, confidence_filter, face_height_filter,
 
                         image_rotated = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
 
-                        #nose_x = keypoints['nose'][0]
-                        #nose_y = keypoints['nose'][1]
-                        #image_cropped_central_part = image_rotated[int(nose_y-side*1/10):int(nose_y+side*1/12), int(nose_x-side*1/10):int(nose_x+side*1/10)]
-
                         image_cropped_central_part = image_rotated[int(upper_left_y+height*1/2):int(upper_left_y + height*2/3), int(upper_left_x+width*1/3):int(upper_left_x + width*2/3)]
 
                         sharpness = variance_of_laplacian(image_cropped_central_part)
@@ -484,14 +480,18 @@ def image_filter(df, save_image, preview, confidence_filter, face_height_filter,
                                 #plt.show()
                                 plt.imshow(image_cropped)
                                 plt.show()
-                            good_img_cnt+=1
+                            
 
-                            if save_image == True:
-                                imagefile_path = 'output/face_photos/' + str(index) +'.jpg'
+                            if save_image_folder != False:
+                                imagefile_path = save_image_folder +'\\'+ str(good_img_cnt) +'.jpg'
                                 cv2.imwrite(imagefile_path, cv2.cvtColor(image_cropped, cv2.COLOR_RGB2BGR))
-                                df['face_file_path'].iloc[index] = imagefile_path
+                                df['face_file_path'].iloc[good_img_cnt] = imagefile_path
+                            
+                            good_img_cnt+=1
         except:
             pass
+    
+    
     return df.dropna()
 
 # 3. FaceNet Embeddings Functions--------------------------------------------------------------------------------------------------
