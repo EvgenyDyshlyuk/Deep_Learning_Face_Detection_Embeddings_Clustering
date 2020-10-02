@@ -135,7 +135,7 @@ def creation_times_range(creation_times_list):
                   '; days:', min(days),'-',max(days))
         except:
             print('Warning!!! Some files with unknown time')
-            if None in creation_times_list:
+        if None in creation_times_list:
                 print('Warning!!! Some files with creation time == None in the directory')
 
 def get_creation_times_range(directory):
