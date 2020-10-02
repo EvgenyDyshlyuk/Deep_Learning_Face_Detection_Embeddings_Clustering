@@ -1,4 +1,4 @@
-# This is a personal ML project for Face Recognition from home archive photos:
+# This is a personal ML project for Face Recognition from home archive photos
 
 # Face Detection, Allignment, Embeddings, Clustering
 
