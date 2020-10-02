@@ -12,8 +12,8 @@
 - Libraries and helper functions are in utils.py, which is run at the beginning of this notebook.
 
 ### Notebook content:
-- 0. Correct jpg files metadata
-- 1. MTCNN (detect faces on photos)
-- 2. Filter results (remove bad quality photos)
-- 3. FaceNet embeddings (obtain 128-dim vector/embedding representing faces features numerically with FaceNet)
-- 4. t-SNE: 2-D representation of clustering similar photos together and separating different photos further from each other.
+0. Correct jpg files metadata
+1. MTCNN (detect faces on photos)
+2. Filter results (remove bad quality photos)
+3. FaceNet embeddings (obtain 128-dim vector/embedding representing faces features numerically with FaceNet)
+4. t-SNE: 2-D representation of clustering similar photos together and separating different photos further from each other.
