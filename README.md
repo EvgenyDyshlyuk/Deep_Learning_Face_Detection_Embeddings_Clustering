@@ -1,6 +1,5 @@
-# This is a personal ML project for Face Recognition from home archive photos
-
 # Face Detection, Allignment, Embeddings, Clustering
+(This is a personal ML project for Face Recognition from home archive photos)
 
 ### About
 - Here is a very nice review of the current (2020.08) state of Deep Learning in face recognition: "Deep Face Recognition: A Survey" https://arxiv.org/abs/1804.06655
@@ -11,7 +10,6 @@
 ### Environment, libraries
 - In order to get to the results a number of libraries have to be imported (please check the Environment folder for help on how to setup the environment).
 - Libraries and helper functions are in utils.py, which is run at the beginning of this notebook.
-
 
 ### Notebook content:
 - 0. Correct jpg files metadata
