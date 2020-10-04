@@ -18,4 +18,6 @@
 3. FaceNet embeddings (obtain 128-dim vector/embedding representing faces features numerically with FaceNet)
 4. t-SNE: 2-D representation of clustering similar photos together and separating different photos further from each other.
 
+![Screenshot](Test\all.png)
+
 (https://github.com/EvgenyDyshlyuk/Face_detection_embeddings_clustering/blob/master/Test/all.png)
