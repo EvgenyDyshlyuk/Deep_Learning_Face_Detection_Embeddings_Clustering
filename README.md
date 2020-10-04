@@ -3,7 +3,7 @@
 
 ### About
 - Here is a very nice review of the current (2020.08) state of Deep Learning in face recognition: "Deep Face Recognition: A Survey" https://arxiv.org/abs/1804.06655
-- In this notebook we use pretrained MTCNN (multi-task convolutional neural network) to detect faces on photos and find landmarks (eyes, nose, mouth) on faces.
+- In this notebook we use pretrained MTCNN (multi-task convolutional neural network) https://arxiv.org/ftp/arxiv/papers/1604/1604.02878.pdf to detect faces on photos and find landmarks (eyes, nose, mouth) on faces.
 - Pretrained FaceNet NN is used to generate face embeddings (128 point vector encoding discriminative features of faces as learned by NN).
 - Both NN are based on FaceNet architecture - google development, which won prestigeous ImageNet competition in 2015 surpassing human performance in face recognition task. 
 
