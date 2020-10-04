@@ -6,6 +6,7 @@
 - Pretrained FaceNet NN (2015 original article: https://arxiv.org/abs/1503.03832) is used to generate face embeddings (128 point vector encoding discriminative facial features).
 - Both NN are based on FaceNet architecture - google development, which won prestigeous ImageNet competition in 2015 surpassing human performance in face recognition task.
 - Current (2020.08) state of Deep Learning in face recognition is outlined in: "Deep Face Recognition: A Survey" (2020 original article: https://arxiv.org/abs/1804.06655).
+- Embeddings are further used to cluster photos (using t-SNE) to groups corresponding to different people (see below).
 
 ### Environment, libraries
 - In order to get to the results a number of libraries have to be imported (please check the Environment folder for help on how to setup the environment).
