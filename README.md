@@ -4,10 +4,10 @@
 ## Project Motivation
 
 ![FaceFitness preview](https://raw.githubusercontent.com/EvgenyDyshlyuk/DeepLearning_face_detection_embeddings_clustering/master/Figures/FaceFitness.png)
-- Face excersises are very popular in some parts of the world.
-- In comparison to body gym, it is much more difficult to track progress and assess improvements.
-- Objective (at least less-subjective) criteria would help everyone involved to track progress and improve the system of excersises.
-- A phone app, which would help in this might have a good business impact (market research not done).
+- Face excersises are very popular in some parts of the world, and the popularity is growing (as overall beauty industry is).
+- In comparison to body gym, it is much more difficult to track progress and assess improvements. In particular, many fake systems are overestimated and good systems are underestimated.
+- Objective (at least less-subjective) way to track progress/improvements would help everyone involved and might help to develop better system of excersises.
+- A phone app, based on this idea might have a good business impact (market research not done).
 
 This is an ongoing project, but intermediate results look interesting to share and fun to implement for your own archive.
 
