@@ -1,6 +1,16 @@
 # Face Detection, Allignment, Embeddings, Clustering
 (This is a personal ML project for Face Recognition from home archive photos)
 
+## Project Motivation
+
+![FaceFitness preview](https://raw.githubusercontent.com/EvgenyDyshlyuk/DeepLearning_face_detection_embeddings_clustering/master/Figures/FaceFitness.png)
+- Face excersises are very popular in some parts of the world
+- In comparison to standard gym, it is much more difficult to track progress and assess improvements
+- Objective (at least less-subjective) criteria would help everyone involved to track progress and improve the system of excersises
+- An application seems to be like a doable task, which might have good business impact 
+
+This is an ongoing project, but intermediate results look interesting to share and fun to implement for your own archive.
+
 ## About the Project
 
 - In this project MTCNN (multi-task convolutional neural network, 2016 original article https://arxiv.org/ftp/arxiv/papers/1604/1604.02878.pdf) is used to detect faces on photos and find landmarks: positions of eyes, nose, and mouth (marked in greeen on the figure).
