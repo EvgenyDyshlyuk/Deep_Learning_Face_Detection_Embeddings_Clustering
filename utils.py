@@ -26,6 +26,7 @@ from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 
 from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
 
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
